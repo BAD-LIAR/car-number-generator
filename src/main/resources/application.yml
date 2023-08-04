@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${SPRING_JDBC_HOST:localhost}:${SPRING_JDBC_PORT:5432}/numb
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate.ddl-auto: validate
+#    database-platform: postgres
+#    database: postgresql
+  mvc:
+    dispatch-options-request: true
+  liquibase:
+    change-log: classpath:db/changelog/changelog.xml
